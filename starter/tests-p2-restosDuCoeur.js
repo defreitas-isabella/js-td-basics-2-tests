@@ -18,10 +18,28 @@ Tester avec des montants d'achat de
 */
 
 // 1. Demandez à l'utilisateur d'entrer le montant total des achats.
+
+const montantTotal =Number(prompt("Entrez le montant total de vos achats :"));
+const remise = montantTotal * 0.1;
+const sommeVersee = Math.min(2,remise * 0.1);
+
+
+if (montantTotal > 25) {
+    console.log("Le montant total après remise est de : " + (montantTotal - remise));
+} else  {
+    console.log("Le montant total est de " + montantTotal+"€");
+}
 // 2. Vérifiez si le montant des achats est supérieur à 25€.
 //    a) Si la condition est vraie, calculez la remise de 10% sur le montant total (0.1 * montant total).
 //    b) Si la condition est fausse, la remise est de 0€.
+
 // 3. Vérifiez si la remise est supérieure à 5€.
+if (remise > 5) {
+    console.log(`La remise est de ${remise}`);
+    console.log(`La somme versée aux restos du coeur est de : ${sommeVersee}€`)
+} else {
+    console.log("La somme versée aux restos du coeur est de 0€.");
+}
 //    a) Si la condition est vraie, calculez la somme versée aux restos du cœur en prenant 10% de la remise (0.1 * remise).
 //       Assurez-vous que le montant versé aux restos du cœur ne dépasse pas 2€ (utilisez Math.min(2, montant versé)).
 //    b) Si la condition est fausse, la somme versée aux restos du cœur est de 0€.

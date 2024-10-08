@@ -21,8 +21,20 @@ Valeurs de test :
 */
 
 // 1. Demandez à l'utilisateur d'entrer le nombre de KW consommés.
+const kwConsommes = Number(prompt("Entrez le nombre de KW consommés : "));
+let cost = 0;
+
+if (kwConsommes <= 30) {
+    cost = kwConsommes * 0.25;
+    console.log(`Vous avez consommé ${kwConsommes} KW. Le coût total est de : ${cost}`);
+} else if ( kwConsommes >=31 && kwConsommes<=50) {
+    cost = kwConsommes * 0.20;
+    console.log(`Vous avez consommé ${kwConsommes} KW. Le coût total est de : ${cost}`);
+}
 // 2. Initialisez une variable cost à 0 pour stocker le coût total.
+
 // 3. Vérifiez combien de KW sont compris dans la tranche de 30 KW.
 // 4. Calculez le coût de cette tranche (KW dans la tranche * 25 centimes) et ajoutez-le à cost.
+
 // 5. Répétez les étapes 3 et 4 pour les tranches de 31 à 50 KW (20 centimes), de 51 à 70 KW (15 centimes), et les KW restants (10 centimes).
 // 6. Affichez le coût total (cost) en euros dans la console.

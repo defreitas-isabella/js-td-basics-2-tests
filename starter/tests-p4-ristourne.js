@@ -22,8 +22,25 @@ Valeurs de test :
 */
 
 // 1. Demandez à l'utilisateur d'entrer le montant des achats.
+const montant = Number(prompt("Veuillez entrer le montant de vos achats : "));
+const kids = Number(prompt("Veuillez entrer le nombre d'enfants dans la famille "));
+let reduction = 0;
 // 2. Demandez à l'utilisateur d'entrer le nombre d'enfants dans la famille.
 // 3. Initialisez une variable de réduction (discount) à 0.
+
+if (montant > 50) {
+    reduction = montant * 0.1;
+    console.log(`Le montant de vos achats est supérieur à 50 : ${montant}€`);
+} else {
+    reduction = montant * 0.05;
+    console.log(`Le montant de vos achats est inférieur à 50 : ${montant}€`);
+}
+
+if (kids >= 3) {
+    console.log(`Vous possédez 3 enfants voire plus : ${kids}`);
+} else  {
+    console.log(`Vous possédez 3 enfants voire moins : ${kids}`);
+}
 // 4. Vérifiez si le montant des achats est supérieur à 50€.
 // 5. Vérifiez si le nombre d'enfants est supérieur ou égal à 3.
 // 6. Si l'une des conditions de l'étape 4 ou de l'étape 5 est vraie, attribuez 10% de réduction (discount = montant des achats * 0.1).
